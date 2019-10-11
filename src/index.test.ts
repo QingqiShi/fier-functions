@@ -10,7 +10,7 @@ it('helloWorld', () => {
 
   helloWorld(req as any, res as any);
 
-  expect(res.send).toHaveBeenCalledWith('Hello world');
+  expect(res.send).toHaveBeenCalledWith('Hello world!');
 });
 
 test.cleanup();

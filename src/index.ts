@@ -6,5 +6,5 @@ import * as functions from 'firebase-functions';
 export const helloWorld = functions
   .region('europe-west2')
   .https.onRequest((_request, response) => {
-    response.send('Hello world');
+    response.send('Hello world!');
   });

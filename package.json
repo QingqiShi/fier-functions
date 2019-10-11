@@ -1,0 +1,82 @@
+{
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "commit": "npx git-cz",
+    "deploy": "firebase deploy --only functions",
+    "lint": "tslint --project tsconfig.json",
+    "logs": "firebase functions:log",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "test": "jest"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^8.0.0",
+    "firebase-functions": "^3.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@types/jest": "^24.0.18",
+    "cz-conventional-changelog": "^3.0.2",
+    "firebase-functions-test": "^0.1.6",
+    "husky": "^3.0.8",
+    "jest": "^24.9.0",
+    "jest-junit": "^8.0.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.test.ts": [
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "src/**/!(*test)*.ts": [
+      "tslint --project tsconfig.json",
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "src/**/*.{json}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "jest-junit"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/setupTests.ts"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "unit tests",
+    "outputDirectory": "./coverage/unit/",
+    "outputName": "result.xml"
+  }
+}

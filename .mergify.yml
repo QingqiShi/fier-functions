@@ -1,0 +1,11 @@
+pull_request_rules:
+  - name: automatic merge on dependency bump and ci success
+    conditions:
+      - author=dependabot-preview[bot]
+      - status-success=main
+      - status-success=codecov/patch
+      - status-success=codecov/project
+      - base=master
+    actions:
+      merge:
+        method: merge

@@ -31,7 +31,7 @@ jobs:
           at: ~/repo
       - run:
           name: Linting
-          command: npm run lint -- --format junit --output reports/junit/tslint-results.xml
+          command: npm run lint -- --format junit --out reports/junit/tslint-results.xml
       - persist_to_workspace:
           root: ~/repo
           paths:

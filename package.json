@@ -69,9 +69,6 @@
       "text",
       "clover",
       "jest-junit"
-    ],
-    "setupFiles": [
-      "<rootDir>/src/setupTests.ts"
     ]
   },
   "jest-junit": {

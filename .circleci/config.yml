@@ -4,7 +4,7 @@ orbs:
 jobs:
   install:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:10.16
     working_directory: ~/repo
     steps:
       - checkout
@@ -20,7 +20,7 @@ jobs:
             - node_modules
   lint:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:10.16
     working_directory: ~/repo
     steps:
       - checkout
@@ -38,7 +38,7 @@ jobs:
             - reports/junit
   test:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:10.16
     working_directory: ~/repo
     steps:
       - checkout
@@ -59,7 +59,7 @@ jobs:
             - reports/junit
   build:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:10.16
     working_directory: ~/repo
     steps:
       - checkout
@@ -77,7 +77,7 @@ jobs:
             - lib
   coverage:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:10.16
     working_directory: ~/repo
     steps:
       - checkout
@@ -90,7 +90,7 @@ jobs:
           path: reports/junit
   deploy:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:10.16
     working_directory: ~/repo
     steps:
       - checkout

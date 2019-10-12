@@ -1,8 +1,7 @@
 import * as functions from 'firebase-functions';
 
-export const webManifest = functions
-  .region('europe-west2')
-  .https.onRequest(async (request, response) => {
+export const webManifest = functions.https.onRequest(
+  async (request, response) => {
     // Available locales
     type Locale = 'en' | 'zh';
     const locales = ['en', 'zh'] as const;
@@ -54,4 +53,5 @@ export const webManifest = functions
   "background_color": "#1658ff",
   "display": "standalone"
 }`);
-  });
+  }
+);

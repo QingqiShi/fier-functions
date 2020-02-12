@@ -25,7 +25,7 @@
     "@types/jest": "^25.1.2",
     "cz-conventional-changelog": "^3.1.0",
     "firebase-functions-test": "^0.1.7",
-    "husky": "^4.2.1",
+    "husky": "^4.2.2",
     "jest": "^25.1.0",
     "jest-junit": "^10.0.0",
     "lint-staged": "^10.0.7",

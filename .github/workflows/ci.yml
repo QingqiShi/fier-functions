@@ -24,7 +24,7 @@ jobs:
             ${{ runner.os }}-
       - run: npm ci
       - run: npm run lint -- --format junit
-      - run: npm test -- --coverage --reporters="default" --reporters="jest-junit"
+      - run: npm test -- --coverage
         env:
           CI: true
       - uses: codecov/codecov-action@v1

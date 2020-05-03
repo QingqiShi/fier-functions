@@ -63,12 +63,15 @@
   },
   "jest": {
     "preset": "ts-jest",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
     "coverageReporters": [
       "json",
       "lcov",
       "text",
-      "clover",
-      "jest-junit"
+      "clover"
     ]
   },
   "jest-junit": {

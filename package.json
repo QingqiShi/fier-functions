@@ -23,7 +23,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/jest": "^25.2.1",
-    "cz-conventional-changelog": "^3.1.0",
+    "cz-conventional-changelog": "^3.2.0",
     "firebase-functions-test": "^0.2.1",
     "husky": "^4.2.5",
     "jest": "^25.5.3",

@@ -2,7 +2,7 @@
   "name": "functions",
   "scripts": {
     "build": "tsc",
-    "commit": "npx git-cz",
+    "commit": "git-cz",
     "deploy": "firebase deploy --only functions",
     "lint": "tslint --project tsconfig.json",
     "logs": "firebase functions:log",

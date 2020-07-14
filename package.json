@@ -20,7 +20,7 @@
     "firebase-functions": "^3.8.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.0.1",
+    "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.0.1",
     "@types/jest": "^26.0.4",
     "cz-conventional-changelog": "^3.2.0",

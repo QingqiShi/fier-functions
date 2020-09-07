@@ -22,7 +22,7 @@
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
-    "@types/jest": "^26.0.10",
+    "@types/jest": "^26.0.13",
     "cz-conventional-changelog": "^3.3.0",
     "firebase-functions-test": "^0.2.2",
     "firebase-tools": "^8.10.0",
